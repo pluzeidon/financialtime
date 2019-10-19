@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialTime.Web", "FinancialTime.Web\FinancialTime.Web.csproj", "{A68C1C35-5106-4E8F-8B3F-3F8D889176A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialTime.Model", "FinancialTime.Model\FinancialTime.Model.csproj", "{052C1B87-5C56-4552-ADA1-A2D66DDCC3F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A68C1C35-5106-4E8F-8B3F-3F8D889176A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68C1C35-5106-4E8F-8B3F-3F8D889176A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68C1C35-5106-4E8F-8B3F-3F8D889176A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68C1C35-5106-4E8F-8B3F-3F8D889176A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{052C1B87-5C56-4552-ADA1-A2D66DDCC3F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{052C1B87-5C56-4552-ADA1-A2D66DDCC3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{052C1B87-5C56-4552-ADA1-A2D66DDCC3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{052C1B87-5C56-4552-ADA1-A2D66DDCC3F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {295CA61B-B4CB-4D86-A254-33EFD549DD60}
+	EndGlobalSection
+EndGlobal

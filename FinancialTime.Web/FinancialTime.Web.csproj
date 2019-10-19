@@ -1,0 +1,255 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A68C1C35-5106-4E8F-8B3F-3F8D889176A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinancialTime.Web</RootNamespace>
+    <AssemblyName>FinancialTime.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="frmIndex.aspx" />
+    <Content Include="vendors\ace-builds\src-min\ace.js" />
+    <Content Include="vendors\ace-builds\src-min\mode-javascript.js" />
+    <Content Include="vendors\ace-builds\src-min\theme-chaos.js" />
+    <Content Include="vendors\bootstrap-datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="vendors\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="vendors\bootstrap-maxlength\bootstrap-maxlength.min.js" />
+    <Content Include="vendors\c3\c3.js" />
+    <Content Include="vendors\c3\c3.min.css" />
+    <Content Include="vendors\chart.js\Chart.min.js" />
+    <Content Include="vendors\chartist\chartist.min.css" />
+    <Content Include="vendors\chartist\chartist.min.js" />
+    <Content Include="vendors\clipboard\clipboard.min.js" />
+    <Content Include="vendors\codemirror\ambiance.css" />
+    <Content Include="vendors\codemirror\codemirror.css" />
+    <Content Include="vendors\codemirror\codemirror.js" />
+    <Content Include="vendors\codemirror\javascript.js" />
+    <Content Include="vendors\codemirror\shell.js" />
+    <Content Include="vendors\colcade\colcade.js" />
+    <Content Include="vendors\css\vendor.bundle.base.css" />
+    <Content Include="vendors\d3\d3.min.js" />
+    <Content Include="vendors\datatables.net-bs4\dataTables.bootstrap4.css" />
+    <Content Include="vendors\datatables.net-bs4\dataTables.bootstrap4.js" />
+    <Content Include="vendors\datatables.net\jquery.dataTables.js" />
+    <Content Include="vendors\dragula\dragula.min.css" />
+    <Content Include="vendors\dragula\dragula.min.js" />
+    <Content Include="vendors\dropify\dropify.min.css" />
+    <Content Include="vendors\dropify\dropify.min.js" />
+    <Content Include="vendors\dropzone\dropzone.css" />
+    <Content Include="vendors\dropzone\dropzone.js" />
+    <Content Include="vendors\flag-icon-css\css\flag-icon.min.css" />
+    <Content Include="vendors\flot\jquery.flot.categories.js" />
+    <Content Include="vendors\flot\jquery.flot.fillbetween.js" />
+    <Content Include="vendors\flot\jquery.flot.js" />
+    <Content Include="vendors\flot\jquery.flot.pie.js" />
+    <Content Include="vendors\flot\jquery.flot.resize.js" />
+    <Content Include="vendors\flot\jquery.flot.stack.js" />
+    <Content Include="vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="vendors\fullcalendar\fullcalendar.min.css" />
+    <Content Include="vendors\fullcalendar\fullcalendar.min.js" />
+    <Content Include="vendors\inputmask\jquery.inputmask.bundle.js" />
+    <Content Include="vendors\ion-rangeslider\css\ion.rangeSlider.css" />
+    <Content Include="vendors\ion-rangeslider\js\ion.rangeSlider.min.js" />
+    <Content Include="vendors\jquery-asColorPicker\css\asColorPicker.min.css" />
+    <Content Include="vendors\jquery-asColorPicker\images\alpha.png" />
+    <Content Include="vendors\jquery-asColorPicker\images\hue.png" />
+    <Content Include="vendors\jquery-asColorPicker\images\saturation.png" />
+    <Content Include="vendors\jquery-asColorPicker\images\transparent.png" />
+    <Content Include="vendors\jquery-asColorPicker\jquery-asColorPicker.min.js" />
+    <Content Include="vendors\jquery-asColor\jquery-asColor.min.js" />
+    <Content Include="vendors\jquery-asGradient\jquery-asGradient.min.js" />
+    <Content Include="vendors\jquery-bar-rating\bars-1to10.css" />
+    <Content Include="vendors\jquery-bar-rating\bars-horizontal.css" />
+    <Content Include="vendors\jquery-bar-rating\bars-movie.css" />
+    <Content Include="vendors\jquery-bar-rating\bars-pill.css" />
+    <Content Include="vendors\jquery-bar-rating\bars-reversed.css" />
+    <Content Include="vendors\jquery-bar-rating\bars-square.css" />
+    <Content Include="vendors\jquery-bar-rating\bootstrap-stars.css" />
+    <Content Include="vendors\jquery-bar-rating\css-stars.css" />
+    <Content Include="vendors\jquery-bar-rating\examples.css" />
+    <Content Include="vendors\jquery-bar-rating\fontawesome-stars-o.css" />
+    <Content Include="vendors\jquery-bar-rating\fontawesome-stars.css" />
+    <Content Include="vendors\jquery-bar-rating\jquery.barrating.min.js" />
+    <Content Include="vendors\jquery-contextmenu\jquery.contextMenu.min.css" />
+    <Content Include="vendors\jquery-contextmenu\jquery.contextMenu.min.js" />
+    <Content Include="vendors\jquery-file-upload\jquery.uploadfile.min.js" />
+    <Content Include="vendors\jquery-file-upload\uploadfile.css" />
+    <Content Include="vendors\jquery-mapael\france_departments.min.js" />
+    <Content Include="vendors\jquery-mapael\jquery.mapael.min.js" />
+    <Content Include="vendors\jquery-mapael\usa_states.min.js" />
+    <Content Include="vendors\jquery-mapael\world_countries.min.js" />
+    <Content Include="vendors\jquery-sparkline\jquery.sparkline.min.js" />
+    <Content Include="vendors\jquery-steps\jquery.steps.min.js" />
+    <Content Include="vendors\jquery-tags-input\jquery.tagsinput.min.css" />
+    <Content Include="vendors\jquery-tags-input\jquery.tagsinput.min.js" />
+    <Content Include="vendors\jquery-toast-plugin\jquery.toast.min.css" />
+    <Content Include="vendors\jquery-toast-plugin\jquery.toast.min.js" />
+    <Content Include="vendors\jquery-validation\jquery.validate.min.js" />
+    <Content Include="vendors\jquery.avgrund\jquery.avgrund.min.js" />
+    <Content Include="vendors\jquery.repeater\jquery.repeater.min.js" />
+    <Content Include="vendors\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="vendors\jsgrid\jsgrid.min.css" />
+    <Content Include="vendors\jsgrid\jsgrid.min.js" />
+    <Content Include="vendors\js\vendor.bundle.base.js" />
+    <Content Include="vendors\justgage\justgage.js" />
+    <Content Include="vendors\justgage\raphael-2.1.4.min.js" />
+    <Content Include="vendors\jvectormap\jquery-jvectormap.css" />
+    <Content Include="vendors\lightgallery\css\lightgallery.css" />
+    <Content Include="vendors\lightgallery\img\loading.gif" />
+    <Content Include="vendors\lightgallery\img\video-play.png" />
+    <Content Include="vendors\lightgallery\img\vimeo-play.png" />
+    <Content Include="vendors\lightgallery\img\youtube-play.png" />
+    <Content Include="vendors\lightgallery\js\lightgallery-all.min.js" />
+    <Content Include="vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="vendors\moment\moment.min.js" />
+    <Content Include="vendors\morris.js\morris.css" />
+    <Content Include="vendors\morris.js\morris.min.js" />
+    <Content Include="vendors\nouislider\nouislider.min.css" />
+    <Content Include="vendors\nouislider\nouislider.min.js" />
+    <Content Include="vendors\owl-carousel-2\owl.carousel.min.css" />
+    <Content Include="vendors\owl-carousel-2\owl.carousel.min.js" />
+    <Content Include="vendors\owl-carousel-2\owl.theme.default.min.css" />
+    <Content Include="vendors\owl-carousel-2\owl.video.play.png" />
+    <Content Include="vendors\progressbar.js\progressbar.min.js" />
+    <Content Include="vendors\quill\quill.min.js" />
+    <Content Include="vendors\quill\quill.snow.css" />
+    <Content Include="vendors\raphael\raphael.min.js" />
+    <Content Include="vendors\select2-bootstrap-theme\select2-bootstrap.min.css" />
+    <Content Include="vendors\select2\select2.min.css" />
+    <Content Include="vendors\select2\select2.min.js" />
+    <Content Include="vendors\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="vendors\simplemde\simplemde.min.css" />
+    <Content Include="vendors\simplemde\simplemde.min.js" />
+    <Content Include="vendors\summernote\dist\summernote-bs4.css" />
+    <Content Include="vendors\summernote\dist\summernote-bs4.min.js" />
+    <Content Include="vendors\sweetalert\sweetalert.min.js" />
+    <Content Include="vendors\tempusdominus-bootstrap-4\tempusdominus-bootstrap-4.js" />
+    <Content Include="vendors\tempusdominus-bootstrap-4\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="vendors\ti-icons\css\themify-icons.css" />
+    <Content Include="vendors\tinymce\tinymce.min.js" />
+    <Content Include="vendors\typeahead.js\typeahead.bundle.min.js" />
+    <Content Include="vendors\x-editable\bootstrap-editable.css" />
+    <Content Include="vendors\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmIndex.aspx.cs">
+      <DependentUpon>frmIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmIndex.aspx.designer.cs">
+      <DependentUpon>frmIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="vendors\summernote\dist\font\summernote64fe.eot" />
+    <Content Include="vendors\summernote\dist\font\summernote64fe.ttf" />
+    <Content Include="vendors\summernote\dist\font\summernote64fe.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50449</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50449/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
