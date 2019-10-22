@@ -1,5 +1,4 @@
 (function($) {
-  'use strict';
   $(function() {
     if ($("#total-sales-chart").length) {
       var areaData = {
@@ -897,7 +896,7 @@
             text.push('<p>Utah</p>');
             text.push('</div>');
             text.push('<div class="item"><div class="legend-label" style="border: 3px solid ' + chart.data.datasets[0].backgroundColor[2] + '"></div>');
-            text.push('<p>Georgia</p>');
+            text.push('<p>Comida</p>');
             text.push('</div>');
           text.push('</div>');
           return text.join("");
@@ -971,7 +970,7 @@
             text.push('<p>Utah</p>');
             text.push('</div>');
             text.push('<div class="item"><div class="legend-label" style="border: 3px solid ' + chart.data.datasets[0].backgroundColor[2] + '"></div>');
-            text.push('<p>Georgia</p>');
+            text.push('<p>Comida</p>');
             text.push('</div>');
           text.push('</div>');
           return text.join("");
@@ -1045,7 +1044,7 @@
             text.push('<p>Utah</p>');
             text.push('</div>');
             text.push('<div class="item"><div class="legend-label" style="border: 3px solid ' + chart.data.datasets[0].backgroundColor[2] + '"></div>');
-            text.push('<p>Georgia</p>');
+            text.push('<p>Comida</p>');
             text.push('</div>');
           text.push('</div>');
           return text.join("");

@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="css\vertical-layout-light\style.css" />
     <Content Include="frmIndex.aspx" />
+    <Content Include="frmInicio.aspx" />
+    <Content Include="frmMovimientos.aspx" />
     <Content Include="images\auth\lockscreen-bg.jpg" />
     <Content Include="images\auth\login-bg.jpg" />
     <Content Include="images\auth\register-bg.jpg" />
@@ -139,6 +141,9 @@
     <Content Include="images\samples\300x300\8.jpg" />
     <Content Include="images\samples\300x300\9.jpg" />
     <Content Include="images\sprites\jsgrid-icons.png" />
+    <Content Include="img\Logo_completo.png" />
+    <Content Include="img\Logo_MINI.png" />
+    <Content Include="img\Presentación1.png" />
     <Content Include="js\alerts.js" />
     <Content Include="js\avgrund.js" />
     <Content Include="js\bt-maxLength.js" />
@@ -324,6 +329,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinancialTime.Master.cs">
+      <DependentUpon>FinancialTime.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialTime.Master.designer.cs">
+      <DependentUpon>FinancialTime.Master</DependentUpon>
+    </Compile>
     <Compile Include="frmIndex.aspx.cs">
       <DependentUpon>frmIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -331,13 +343,30 @@
     <Compile Include="frmIndex.aspx.designer.cs">
       <DependentUpon>frmIndex.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmInicio.aspx.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmInicio.aspx.designer.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos.aspx.cs">
+      <DependentUpon>frmMovimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos.aspx.designer.cs">
+      <DependentUpon>frmMovimientos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\Presentación1.pptx" />
+    <Content Include="FinancialTime.Master" />
     <None Include="packages.config" />
     <Content Include="vendors\summernote\dist\font\summernote64fe.eot" />
     <Content Include="vendors\summernote\dist\font\summernote64fe.ttf" />
     <Content Include="vendors\summernote\dist\font\summernote64fe.woff" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
