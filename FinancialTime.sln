@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialTime.Model", "Fina
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialTime.Utils", "FinancialTime.Utils\FinancialTime.Utils.csproj", "{2AF06A4C-A6FE-45D3-9FE6-E86D01BFB14B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialTimes.DAL", "FinancialTimes.DAL\FinancialTimes.DAL.csproj", "{46CF5879-E122-45B6-B6EE-6A775BD1CA03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2AF06A4C-A6FE-45D3-9FE6-E86D01BFB14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF06A4C-A6FE-45D3-9FE6-E86D01BFB14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF06A4C-A6FE-45D3-9FE6-E86D01BFB14B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46CF5879-E122-45B6-B6EE-6A775BD1CA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46CF5879-E122-45B6-B6EE-6A775BD1CA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46CF5879-E122-45B6-B6EE-6A775BD1CA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46CF5879-E122-45B6-B6EE-6A775BD1CA03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2AF06A4C-A6FE-45D3-9FE6-E86D01BFB14B}</ProjectGuid>
+    <ProjectGuid>{46CF5879-E122-45B6-B6EE-6A775BD1CA03}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FinancialTime.Utils</RootNamespace>
-    <AssemblyName>FinancialTime.Utils</AssemblyName>
+    <RootNamespace>FinancialTimes.DAL</RootNamespace>
+    <AssemblyName>FinancialTimes.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -67,10 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions.cs" />
-    <Compile Include="PersBase.cs" />
+    <Compile Include="MovimientosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialTime.Model\FinancialTime.Model.csproj">
+      <Project>{052C1B87-5C56-4552-ADA1-A2D66DDCC3F7}</Project>
+      <Name>FinancialTime.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinancialTime.Utils\FinancialTime.Utils.csproj">
+      <Project>{2AF06A4C-A6FE-45D3-9FE6-E86D01BFB14B}</Project>
+      <Name>FinancialTime.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -85,9 +93,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50530</DevelopmentServerPort>
+          <DevelopmentServerPort>50635</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50530/</IISUrl>
+          <IISUrl>http://localhost:50635/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
