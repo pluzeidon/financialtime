@@ -57,7 +57,7 @@ namespace FinancialTime.Utils
 
         private string ConnectionString()
         {
-            return ConfigurationManager.ConnectionStrings["csEntegaTarjetasDB"].ConnectionString;
+            return ConfigurationManager.ConnectionStrings["csDataBase"].ConnectionString;
         }
         #endregion
     }

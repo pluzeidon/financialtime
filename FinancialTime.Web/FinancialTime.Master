@@ -15,11 +15,10 @@
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
-    <!-- Plugin css for this page -->
-    <link href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" rel="stylesheet" />
-    <!-- End plugin css for this page -->
+    
     <!-- inject:css -->
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="css/vertical-layout-light/Gridview.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -197,9 +196,11 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <asp:ContentPlaceHolder ID="head" runat="server">
-                    </asp:ContentPlaceHolder>
-
+                    <form id="form1" runat="server">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <asp:ContentPlaceHolder ID="head" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </form>
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
@@ -222,10 +223,7 @@
     <!-- Plugin js for this page -->
     <script src="vendors/chart.js/Chart.min.js"></script>
     <!-- End plugin js for this page -->
-    <!-- Plugin js for this page-->
-    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <!-- End plugin js for this page-->
+    
     <!-- inject:js -->
     <script src="js/off-canvas.js"></script>
     <script src="js/hoverable-collapse.js"></script>
@@ -236,9 +234,7 @@
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
     <!-- End custom js for this page-->
-    <!-- Custom js for this page-->
-    <script src="js/data-table.js"></script>
-    <!-- End custom js for this page-->
+    
 </body>
 
 <!-- Mirrored from www.urbanui.com/fily/template/demo/vertical-hidden-toggle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Oct 2019 17:11:31 GMT -->

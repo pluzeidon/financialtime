@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\vertical-layout-light\Gridview.css" />
     <Content Include="css\vertical-layout-light\style.css" />
     <Content Include="frmIndex.aspx" />
     <Content Include="frmInicio.aspx" />
     <Content Include="frmMovimientos.aspx" />
+    <Content Include="frmMovtos.aspx" />
     <Content Include="images\auth\lockscreen-bg.jpg" />
     <Content Include="images\auth\login-bg.jpg" />
     <Content Include="images\auth\register-bg.jpg" />
@@ -357,6 +359,13 @@
     <Compile Include="frmMovimientos.aspx.designer.cs">
       <DependentUpon>frmMovimientos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmMovtos.aspx.cs">
+      <DependentUpon>frmMovtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMovtos.aspx.designer.cs">
+      <DependentUpon>frmMovtos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +382,20 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialTime.Model\FinancialTime.Model.csproj">
+      <Project>{052C1B87-5C56-4552-ADA1-A2D66DDCC3F7}</Project>
+      <Name>FinancialTime.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinancialTime.Utils\FinancialTime.Utils.csproj">
+      <Project>{2AF06A4C-A6FE-45D3-9FE6-E86D01BFB14B}</Project>
+      <Name>FinancialTime.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinancialTimes.DAL\FinancialTimes.DAL.csproj">
+      <Project>{46CF5879-E122-45B6-B6EE-6A775BD1CA03}</Project>
+      <Name>FinancialTimes.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
