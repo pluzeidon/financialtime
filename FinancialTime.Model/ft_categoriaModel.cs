@@ -8,8 +8,10 @@ namespace FinancialTime.Model
     {
         public int cat_id { get; set; }
         public int usu_id { get; set; }
-        public int uscat_cargo_abonou_nombre { get; set; }
+        public int cat_cargo_abono { get; set; }
         public int cat_signo { get; set; }
         public string cat_descripcion { get; set; }
+        public string notSortColumn { get; set; }
+        public string notSortDir { get; set; }
     }
 }

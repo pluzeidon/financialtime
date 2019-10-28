@@ -3,8 +3,6 @@ using FinancialTime.Utils;
 using FinancialTimes.DAL;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -38,6 +36,8 @@ namespace FinancialTime.Web
                 if (GotoFirst) gvMovimientos.PageIndex = 0;
                 gvMovimientos.DataSource = lista;
                 gvMovimientos.DataBind();
+                
+                dfRegistros.InnerText =  "Total de Registros de la busqueda: " + String.Format("{0:#,0}", lista.Count) + "  | Total de Registros desplegados: " + gvMovimientos.PageCount;
             }
             catch (Exception ex)
             {
@@ -116,6 +116,37 @@ namespace FinancialTime.Web
                         break;
                 }
 
+            }
+        }
+
+        public string FormateaError(string msg)
+        {
+            string sMensaje = string.Empty;
+            if (msg.Length >= 200)
+            {
+                sMensaje = msg.Substring(0, 200);
+            }
+            else
+            {
+                sMensaje = msg;
+            }
+            string mesError = sMensaje.Replace('"', ' ').Trim();
+            mesError = mesError.Replace("'", " ");
+            return mesError;
+        }
+
+        protected void btnNuevo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //dfcad_descripcion_cap.Text = "";
+                //cmbcad_activo.SelectedValue = "1";
+                //hdnAltaRegistro.Value = "1";
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "MyModal", "$('#ModalEditarRegistro').modal('show');", true);
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Error", "msgErrorMinimoDocumentos('" + FormateaError(ex.Message) + "');", true);
             }
         }
     }
