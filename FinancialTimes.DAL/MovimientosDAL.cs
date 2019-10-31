@@ -38,5 +38,61 @@ namespace FinancialTimes.DAL
             { throw; }
             finally { parametros = null; }
         }
+
+        public List<ft_movimientoModel> insMovimiento(ft_movimientoModel _Entidad)
+        {
+            List<ft_movimientoModel> _list = new List<ft_movimientoModel>();
+            SqlParameter[] parametros =
+               {
+                    new SqlParameter("@mov_descripcion", SqlDbType.VarChar,4000){ Value = _Entidad.mov_descripcion},
+                    new SqlParameter("@mov_importe", SqlDbType.Decimal){ Value = _Entidad.mov_importe},
+                    new SqlParameter("@usu_id", SqlDbType.Int){ Value = _Entidad.usu_id},
+                    new SqlParameter("@cat_id", SqlDbType.Int){ Value = _Entidad.cat_id},
+                    new SqlParameter("@ban_id", SqlDbType.Int){ Value = _Entidad.ban_id},
+                    new SqlParameter("@mov_fecha", SqlDbType.DateTime){ Value = _Entidad.mov_fecha}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "InsMovimiento", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_movimientoModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
+
+        public List<ft_movimientoModel> UpdMovimiento(ft_movimientoModel _Entidad)
+        {
+            List<ft_movimientoModel> _list = new List<ft_movimientoModel>();
+            SqlParameter[] parametros =
+               {
+                    new SqlParameter("@mov_descripcion", SqlDbType.VarChar,4000){ Value = _Entidad.mov_descripcion},
+                    new SqlParameter("@mov_importe", SqlDbType.Decimal){ Value = _Entidad.mov_importe},
+                    new SqlParameter("@usu_id", SqlDbType.Int){ Value = _Entidad.usu_id},
+                    new SqlParameter("@mov_id", SqlDbType.Int){ Value = _Entidad.mov_id},
+                    new SqlParameter("@cat_id", SqlDbType.Int){ Value = _Entidad.cat_id},
+                    new SqlParameter("@ban_id", SqlDbType.Int){ Value = _Entidad.ban_id},
+                    new SqlParameter("@mov_fecha", SqlDbType.DateTime){ Value = _Entidad.mov_fecha}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "UpdMovimiento", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_movimientoModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
+
     }
 }

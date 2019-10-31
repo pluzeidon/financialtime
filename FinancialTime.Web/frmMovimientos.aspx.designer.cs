@@ -49,39 +49,12 @@ namespace FinancialTime.Web {
         protected global::System.Web.UI.WebControls.HiddenField hdndfusu_id;
         
         /// <summary>
-        /// gvMovimientos control.
+        /// hdndfmov_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMovimientos;
-        
-        /// <summary>
-        /// cmbCategoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbCategoria;
-        
-        /// <summary>
-        /// dfmov_descripcion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dfmov_descripcion;
-        
-        /// <summary>
-        /// dfRegistros control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dfRegistros;
+        protected global::System.Web.UI.WebControls.HiddenField hdndfmov_id;
     }
 }

@@ -46,5 +46,79 @@ namespace FinancialTime.Web.Servicios
             catch
             { throw; }
         }
+
+        [WebMethod]
+        public List<ft_movimientoModel> GetMovimientos(int nusu_id, DateTime dmov_fechaDesde, DateTime dmov_fechaHasta, int nban_id)
+        {
+            try
+            {
+                MovimientosDAL _DAL = new MovimientosDAL();
+                ft_movimientoModel entity = new ft_movimientoModel();
+                entity.usu_id = nusu_id;
+                entity.mov_fecha = dmov_fechaDesde;
+                entity.notmov_fecha_hasta = dmov_fechaHasta;
+                if (nban_id > 0)
+                {
+                    entity.ban_id = nban_id;
+                }
+                return _DAL.GETMovimientos(entity);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_movimientoModel> GetMovimiento(int nusu_id, int nmov_id)
+        {
+            try
+            {
+                MovimientosDAL _DAL = new MovimientosDAL();
+                ft_movimientoModel entity = new ft_movimientoModel();
+                entity.usu_id = nusu_id;
+                entity.mov_id = nmov_id;
+                return _DAL.GETMovimientos(entity);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_movimientoModel> InsMovimiento(int nusu_id, int nban_id, int ncat_id, string smov_descripcion, DateTime dmov_fecha, decimal nmov_importe)
+        {
+            try
+            {
+                ft_movimientoModel ft_MovimientoModel = new ft_movimientoModel();
+                ft_MovimientoModel.usu_id = nusu_id;
+                ft_MovimientoModel.ban_id = nban_id;
+                ft_MovimientoModel.cat_id = ncat_id;
+                ft_MovimientoModel.mov_descripcion = smov_descripcion;
+                ft_MovimientoModel.mov_fecha = dmov_fecha;
+                ft_MovimientoModel.mov_importe = nmov_importe;
+                MovimientosDAL movimientosDAL = new MovimientosDAL();
+                return movimientosDAL.insMovimiento(ft_MovimientoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_movimientoModel> UpdMovimiento(int nmov_id, int nusu_id, int nban_id, int ncat_id, string smov_descripcion, DateTime dmov_fecha, decimal nmov_importe)
+        {
+            try
+            {
+                ft_movimientoModel ft_MovimientoModel = new ft_movimientoModel();
+                ft_MovimientoModel.usu_id = nusu_id;
+                ft_MovimientoModel.mov_id = nmov_id;
+                ft_MovimientoModel.ban_id = nban_id;
+                ft_MovimientoModel.cat_id = ncat_id;
+                ft_MovimientoModel.mov_descripcion = smov_descripcion;
+                ft_MovimientoModel.mov_fecha = dmov_fecha;
+                ft_MovimientoModel.mov_importe = nmov_importe;
+                MovimientosDAL movimientosDAL = new MovimientosDAL();
+                return movimientosDAL.UpdMovimiento(ft_MovimientoModel);
+            }
+            catch
+            { throw; }
+        }
     }
 }

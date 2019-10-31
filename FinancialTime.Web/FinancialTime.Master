@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="vendors/jquery-file-upload/uploadfile.css">
     <link rel="stylesheet" href="vendors/jquery-tags-input/jquery.tagsinput.min.css">
     <link rel="stylesheet" href="vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css">
+      <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+
     <!-- End plugin css for this page -->
 
     <!-- inject:css -->
@@ -194,7 +196,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frmMovtos.aspx">
+                        <a class="nav-link" href="frmMovimientos.aspx">
                             <i class="mdi mdi-puzzle menu-icon"></i>
                             <span class="menu-title">Movimientos</span>
                         </a>
@@ -255,6 +257,8 @@
     <script src="vendors/dropzone/dropzone.js"></script>
     <script src="vendors/jquery.repeater/jquery.repeater.min.js"></script>
     <script src="vendors/inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <!-- End plugin js for this page -->
 
     <!-- inject:js -->
@@ -277,6 +281,7 @@
     <script src="js/form-repeater.js"></script>
     <script src="js/inputmask.js"></script>
     <script src="js/modal-demo.js"></script>
+    <script src="js/data-table.js"></script>
     
     <!-- End custom js for this page-->
 

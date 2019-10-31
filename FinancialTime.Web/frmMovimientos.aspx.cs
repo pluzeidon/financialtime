@@ -19,7 +19,7 @@ namespace FinancialTime.Web
             {
                 SessionCls.SetFieldSort("mov_fecha");
                 ObtenDireccion("mov_fecha");
-                bindData();
+                //bindData();
 
                 //Servicios servicios = new Web.Servicios();
             }
@@ -27,43 +27,43 @@ namespace FinancialTime.Web
 
         private void bindData(string notSortColumn = null, string notSortDir = null, bool GotoFirst = false)
         {
-            try
-            {
-                //System.Threading.Thread.Sleep(10);
-                ft_movimientoModel _ft_movimientoModel = new ft_movimientoModel();
-                _ft_movimientoModel.notSortColumn = notSortColumn;
-                _ft_movimientoModel.notSortDir = notSortDir;
-                List<ft_movimientoModel> lista = null;
-                MovimientosDAL _DAL = new MovimientosDAL();
-                lista = _DAL.GETMovimientos(_ft_movimientoModel);
-                if (GotoFirst) gvMovimientos.PageIndex = 0;
-                gvMovimientos.DataSource = lista;
-                gvMovimientos.DataBind();
-                dfRegistros.InnerText = "Registros de la busqueda: " + String.Format("{0:#,0}", lista.Count) + "  | Desplegados: " + gvMovimientos.Rows.Count;
-            }
-            catch (Exception ex)
-            {
-                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Error", "msgErrorMinimo('" + ex.Message + "');", true);
-            }
+            //try
+            //{
+            //    //System.Threading.Thread.Sleep(10);
+            //    ft_movimientoModel _ft_movimientoModel = new ft_movimientoModel();
+            //    _ft_movimientoModel.notSortColumn = notSortColumn;
+            //    _ft_movimientoModel.notSortDir = notSortDir;
+            //    List<ft_movimientoModel> lista = null;
+            //    MovimientosDAL _DAL = new MovimientosDAL();
+            //    lista = _DAL.GETMovimientos(_ft_movimientoModel);
+            //    if (GotoFirst) gvMovimientos.PageIndex = 0;
+            //    gvMovimientos.DataSource = lista;
+            //    gvMovimientos.DataBind();
+            //    dfRegistros.InnerText = "Registros de la busqueda: " + String.Format("{0:#,0}", lista.Count) + "  | Desplegados: " + gvMovimientos.Rows.Count;
+            //}
+            //catch (Exception ex)
+            //{
+            //    ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Error", "msgErrorMinimo('" + ex.Message + "');", true);
+            //}
 
         }
 
 
         protected void gvMovimientos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            gvMovimientos.PageIndex = e.NewPageIndex;
-            bindData();
+            //gvMovimientos.PageIndex = e.NewPageIndex;
+            //bindData();
         }
 
         protected void gvMovimientos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName.ToString() == "Sort")
-            {
-                string sCampo = e.CommandArgument.ToString();
-                SessionCls.SetFieldSort(sCampo);
-                ObtenDireccion(sCampo);
-                bindData(sCampo, SessionCls.GetFieldSortDirection(), true);
-            }
+            //if (e.CommandName.ToString() == "Sort")
+            //{
+            //    string sCampo = e.CommandArgument.ToString();
+            //    SessionCls.SetFieldSort(sCampo);
+            //    ObtenDireccion(sCampo);
+            //    bindData(sCampo, SessionCls.GetFieldSortDirection(), true);
+            //}
         }
 
         private void ObtenDireccion(string psFieldSort)
