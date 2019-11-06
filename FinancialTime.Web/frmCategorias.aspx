@@ -110,14 +110,7 @@
         crossorigin="anonymous">
     </script>
     <script type="text/javascript">
-        var primise = new Promise(function (resolve, reject) {
-            if (ExisteMovimientosXCategoria($("#hdndfcat_id").val())) {
-                resolve(true);
-            }
-            else {
-                resolve(false);
-            }
-        })
+        
         //  GENERAL
         //  Funcion que se dispara cuando se cargo completamente la pagina
         //  Pone las fechas de la pagina al dia actual
@@ -144,9 +137,6 @@
         //
         function BorrarRegistro() {
             $("#ModalConfirmarBorrar").modal('hide');
-
-            
-
             var params = new Object();
             var data = new Object();
             params.ncat_id = $("#hdndfcat_id").val();
@@ -163,7 +153,12 @@
                     CargaTabla();
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    alert('Uncaught Error: ' + jqXHR.responseText)
+                    if (jqXHR.responseText.indexOf("The DELETE statement conflicted with the REFERENCE constraint") >= 0) {
+                        alert('La Categoría, tiene movimientos asociados, para borrarla, es encesario que elimine primero sus movimientos...');
+                    }
+                    else {
+                        alert('Uncaught Error: ' + jqXHR.responseText);
+                    }
                 }
             })
 

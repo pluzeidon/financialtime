@@ -9,6 +9,7 @@ namespace FinancialTime.Model
         public int ban_id { get; set; }
         public int usu_id { get; set; } 
         public string ban_nombre { get; set; }
+        public decimal ban_saldo { get; set; }
         public string notSortColumn { get; set; }
         public string notSortDir { get; set; }
     }
