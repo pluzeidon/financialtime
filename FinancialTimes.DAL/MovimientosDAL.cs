@@ -94,5 +94,27 @@ namespace FinancialTimes.DAL
             finally { parametros = null; }
         }
 
+        public List<ft_movimientoModel> delMovimiento(ft_movimientoModel _Entidad)
+        {
+            List<ft_movimientoModel> _list = new List<ft_movimientoModel>();
+            SqlParameter[] parametros =
+               {    new SqlParameter("@mov_id", SqlDbType.Int){ Value = _Entidad.mov_id}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "delMovimiento", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_movimientoModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
+
+
     }
 }

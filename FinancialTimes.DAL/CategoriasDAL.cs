@@ -36,5 +36,76 @@ namespace FinancialTimes.DAL
             { throw; }
             finally { parametros = null; }
         }
+
+        public List<ft_categoriaModel> insCategoria(ft_categoriaModel _Entidad)
+        {
+            List<ft_categoriaModel> _list = new List<ft_categoriaModel>();
+            SqlParameter[] parametros =
+               {
+                    new SqlParameter("@cat_descripcion", SqlDbType.VarChar,4000){ Value = _Entidad.cat_descripcion},
+                    new SqlParameter("@usu_id", SqlDbType.Int){ Value = _Entidad.usu_id},
+                    new SqlParameter("@cat_cargo_abono", SqlDbType.Int){ Value = _Entidad.cat_cargo_abono}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "InsCategoria", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_categoriaModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
+
+        public List<ft_categoriaModel> UpdCategoria(ft_categoriaModel _Entidad)
+        {
+            List<ft_categoriaModel> _list = new List<ft_categoriaModel>();
+            SqlParameter[] parametros =
+               {
+                    new SqlParameter("@cat_descripcion", SqlDbType.VarChar,4000){ Value = _Entidad.cat_descripcion},
+                    new SqlParameter("@usu_id", SqlDbType.Int){ Value = _Entidad.usu_id},
+                    new SqlParameter("@cat_id", SqlDbType.Int){ Value = _Entidad.cat_id},
+                    new SqlParameter("@cat_cargo_abono", SqlDbType.Int){ Value = _Entidad.cat_cargo_abono}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "UpdCategoria", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_categoriaModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
+
+        public List<ft_categoriaModel> delCategoria(ft_categoriaModel _Entidad)
+        {
+            List<ft_categoriaModel> _list = new List<ft_categoriaModel>();
+            SqlParameter[] parametros =
+               {
+                    new SqlParameter("@cat_id", SqlDbType.Int){ Value = _Entidad.cat_id}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "delCategoria", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_categoriaModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
     }
 }

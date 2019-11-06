@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="css\vertical-layout-light\Gridview.css" />
     <Content Include="css\vertical-layout-light\style.css" />
+    <Content Include="frmCategorias.aspx" />
     <Content Include="frmInicio.aspx" />
     <Content Include="frmMovimientos.aspx" />
     <Content Include="images\auth\lockscreen-bg.jpg" />
@@ -149,6 +150,7 @@
     <Content Include="js\bt-maxLength.js" />
     <Content Include="js\c3.js" />
     <Content Include="js\calendar.js" />
+    <Content Include="js\categoria_dt.js" />
     <Content Include="js\chart.js" />
     <Content Include="js\chartist.js" />
     <Content Include="js\clipboard.js" />
@@ -336,6 +338,13 @@
     </Compile>
     <Compile Include="FinancialTime.Master.designer.cs">
       <DependentUpon>FinancialTime.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategorias.aspx.cs">
+      <DependentUpon>frmCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCategorias.aspx.designer.cs">
+      <DependentUpon>frmCategorias.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmInicio.aspx.cs">
       <DependentUpon>frmInicio.aspx</DependentUpon>

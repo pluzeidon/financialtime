@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="vendors/jquery-file-upload/uploadfile.css">
     <link rel="stylesheet" href="vendors/jquery-tags-input/jquery.tagsinput.min.css">
     <link rel="stylesheet" href="vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css">
-      <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
 
     <!-- End plugin css for this page -->
 
@@ -49,9 +49,9 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="index.html">
+                <a class="navbar-brand brand-logo" href="frmInicio.aspx">
                     <img src="img/Logo_completo.png" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="index.html">
+                <a class="navbar-brand brand-logo-mini" href="frmInicio.aspx">
                     <img src="img/Logo_MINI.png" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -208,9 +208,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/widgets/widgets.html">
+                        <a class="nav-link" href="frmCategorias.aspx">
                             <i class="mdi mdi-puzzle menu-icon"></i>
-                            <span class="menu-title">Transferencias</span>
+                            <span class="menu-title">Categorias</span>
                         </a>
                     </li>
                 </ul>
@@ -258,7 +258,7 @@
     <script src="vendors/jquery.repeater/jquery.repeater.min.js"></script>
     <script src="vendors/inputmask/jquery.inputmask.bundle.js"></script>
     <script src="vendors/datatables.net/jquery.dataTables.js"></script>
-  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <!-- End plugin js for this page -->
 
     <!-- inject:js -->
@@ -267,7 +267,7 @@
     <script src="js/template.js"></script>
     <script src="js/settings.js"></script>
     <script src="js/todolist.js"></script>
-    
+
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>

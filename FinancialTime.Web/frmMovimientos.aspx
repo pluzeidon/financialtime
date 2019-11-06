@@ -126,7 +126,7 @@
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous">
-    </script>
+    </script>    
     <script type="text/javascript">
 
         //  GENERAL
@@ -395,6 +395,7 @@
             var params = new Object();
             var data = new Object();
             params.nusu_id = $("#<%=hdndfusu_id.ClientID%>").val();
+            params.ncat_id = 0;
             params = JSON.stringify(params);
             const url = 'Servicios/Servicios.asmx/GetCategorias';
             $.ajax({

@@ -34,13 +34,14 @@ namespace FinancialTime.Web.Servicios
         }
 
         [WebMethod]
-        public List<ft_categoriaModel> GetCategorias(int nusu_id)
+        public List<ft_categoriaModel> GetCategorias(int nusu_id, int ncat_id)
         {
             try
             {
                 CategoriasDAL _DAL = new CategoriasDAL();
                 ft_categoriaModel ft_CategoriaModel = new ft_categoriaModel();
                 ft_CategoriaModel.usu_id = nusu_id;
+                ft_CategoriaModel.cat_id = ncat_id;
                 return _DAL.GETCategorias(ft_CategoriaModel);
             }
             catch
@@ -61,6 +62,21 @@ namespace FinancialTime.Web.Servicios
                 {
                     entity.ban_id = nban_id;
                 }
+                return _DAL.GETMovimientos(entity);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_movimientoModel> GetMovimientosXCategoria(int nusu_id, int ncat_id)
+        {
+            try
+            {
+                MovimientosDAL _DAL = new MovimientosDAL();
+                ft_movimientoModel entity = new ft_movimientoModel();
+                entity.usu_id = nusu_id;
+                entity.cat_id = ncat_id;                
                 return _DAL.GETMovimientos(entity);
             }
             catch
@@ -116,6 +132,67 @@ namespace FinancialTime.Web.Servicios
                 ft_MovimientoModel.mov_importe = nmov_importe;
                 MovimientosDAL movimientosDAL = new MovimientosDAL();
                 return movimientosDAL.UpdMovimiento(ft_MovimientoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_movimientoModel> delMovimiento(int nmov_id)
+        {
+            try
+            {
+                ft_movimientoModel ft_MovimientoModel = new ft_movimientoModel();
+                ft_MovimientoModel.mov_id = nmov_id;
+                MovimientosDAL movimientosDAL = new MovimientosDAL();
+                return movimientosDAL.delMovimiento(ft_MovimientoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_categoriaModel> InsCategoria(int ncargo_abono, int ncat_id, int nusu_id, string scat_descripcion)
+        {
+            try
+            {
+                ft_categoriaModel ft_CategoriaModel = new ft_categoriaModel();
+                ft_CategoriaModel.usu_id = nusu_id;
+                ft_CategoriaModel.cat_cargo_abono = ncargo_abono;
+                ft_CategoriaModel.cat_descripcion = scat_descripcion;
+                CategoriasDAL categoriasDAL = new CategoriasDAL();
+                return categoriasDAL.insCategoria(ft_CategoriaModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_categoriaModel> UpdCategoria(int ncargo_abono, int ncat_id, int nusu_id, string scat_descripcion)
+        {
+            try
+            {
+                ft_categoriaModel ft_CategoriaModel = new ft_categoriaModel();
+                ft_CategoriaModel.usu_id = nusu_id;
+                ft_CategoriaModel.cat_id = ncat_id;
+                ft_CategoriaModel.cat_descripcion = scat_descripcion;
+                ft_CategoriaModel.cat_cargo_abono = ncargo_abono;
+                CategoriasDAL categoriasDAL = new CategoriasDAL();
+                return categoriasDAL.UpdCategoria(ft_CategoriaModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_categoriaModel> delCategoria(int ncat_id)
+        {
+            try
+            {
+                ft_categoriaModel ft_CategoriaModel = new ft_categoriaModel();
+                ft_CategoriaModel.cat_id = ncat_id;
+                CategoriasDAL categoriasDAL = new CategoriasDAL();
+                return categoriasDAL.delCategoria(ft_CategoriaModel);
             }
             catch
             { throw; }
