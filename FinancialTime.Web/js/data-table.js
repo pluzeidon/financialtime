@@ -15,10 +15,9 @@
                 "className": "text-left"
             },
             {
-                "targets": 4,
+                "targets": 2,
                 "className": "text-right",
-            }
-            ]
+            } ]
         });
         $('#tblMovimientos').each(function () {
             var datatable = $(this);
@@ -41,11 +40,7 @@
             "iDisplayLength": 10,
             "language": {
                 search: ""
-            }, "paging": false,
-            columnDefs: [
-                { width: 20, targets: 2 }
-            ],
-            fixedColumns: false
+            }, "paging": false
         });
         $('#tblCategorias').each(function () {
             var datatable = $(this);

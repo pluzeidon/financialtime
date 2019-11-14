@@ -39,6 +39,29 @@ namespace FinancialTimes.DAL
             finally { parametros = null; }
         }
 
+        public List<ft_movimientoModel> GETUltimosMovimientos(ft_movimientoModel _Entidad)
+        {
+            List<ft_movimientoModel> _list = new List<ft_movimientoModel>();
+            SqlParameter[] parametros =
+               {
+                    new SqlParameter("@usu_id", SqlDbType.Int){ Value = _Entidad.usu_id}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "ObtUltimosMovimientos", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_movimientoModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
+
+
         public List<ft_movimientoModel> insMovimiento(ft_movimientoModel _Entidad)
         {
             List<ft_movimientoModel> _list = new List<ft_movimientoModel>();

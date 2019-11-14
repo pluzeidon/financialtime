@@ -34,5 +34,28 @@ namespace FinancialTimes.DAL
             { throw; }
             finally { parametros = null; }
         }
+
+        public List<ft_bancoModel> GETBancosSaldo(ft_bancoModel _Entidad)
+        {
+            List<ft_bancoModel> _list = new List<ft_bancoModel>();
+            SqlParameter[] parametros =
+               {
+                    new SqlParameter("@usu_id", SqlDbType.Int){ Value = _Entidad.usu_id}
+               };
+            try
+            {
+                using (var reader = base.ExecuteReader(CommandType.StoredProcedure, "ObtBancosSaldo", parametros))
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    _list = dataTable.ToList<ft_bancoModel>();
+                }
+                return _list;
+            }
+            catch
+            { throw; }
+            finally { parametros = null; }
+        }
+
     }
 }

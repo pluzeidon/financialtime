@@ -24,9 +24,9 @@
                                     <table id="tblCategorias" class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Descripcion</th>
-                                                <th>Tipo</th>
                                                 <th>Accion</th>
+                                                <th>Descripcion</th>
+                                                <th>Tipo</th>                                                
                                             </tr>
                                         </thead>
 
@@ -267,12 +267,13 @@
                 }
             })
         }
-
+        //
+        //  EDICION MOVIMIENTOS
+        //  Asigna los valores a las columnas del Grid
+        //
         function FillTabla(result) {
             var table = $('#tblCategorias').dataTable();
-
             table.dataTable().fnClearTable();
-
             var items = result.d || result;
             for (var i = 0; i < items.length; i++) {
                 var cat_id = items[i].cat_id;
@@ -286,9 +287,8 @@
                     scat_cargo_abono = 'Gasto';
                 }
                 var sbutton = "<a class='btn btn-xs btn-primary' onclick='EditarRegistro(" + cat_id + ");' href='#'><i class='mdi mdi-table-edit ml-1'></i></a>&nbsp;&nbsp;<a class='btn btn-xs btn-danger' onclick='ConfirmarBorrar(" + cat_id + ");' href='#'><i class='mdi mdi-close-circle-outline ml-1'></i></a>"
-                table.fnAddData([cat_descripcion, scat_cargo_abono, sbutton]);
+                table.fnAddData([sbutton, cat_descripcion, scat_cargo_abono]);
             }
-
         }
 
 

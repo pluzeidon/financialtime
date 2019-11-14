@@ -46,12 +46,12 @@
                                     <table id="tblMovimientos" class="table table-striped">
                                         <thead>
                                             <tr>
+                                                <th>Acción</th>
+                                                <th>Categoria</th>
+                                                <th>Importe</th>
+                                                <th>Descripcion</th>
                                                 <th>Fecha</th>
                                                 <th>Banco</th>
-                                                <th>Categoria</th>
-                                                <th>Descripcion</th>
-                                                <th>Importe</th>
-                                                <th>Acción</th>
                                             </tr>
                                         </thead>
 
@@ -118,16 +118,49 @@
                         </div>
                     </div>
                 </div>
-                
+
             </ContentTemplate>
         </asp:UpdatePanel>
     </form>
+
+
     <script
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous">
-    </script>    
+    </script>
     <script type="text/javascript">
+
+        $(function () {
+            $('#tblMovimientos').DataTable({
+                "aLengthMenu": [
+                    [5, 10, 15, -1],
+                    [5, 10, 15, "All"]
+                ],
+                "iDisplayLength": 10,
+                "language": {
+                    search: ""
+                }, "paging": false,
+                'columnDefs': [{
+                    "targets": 0,
+                    "className": "text-left"
+                },
+                {
+                    "targets": 2,
+                    "className": "text-right",
+                }]
+            });
+            $('#tblMovimientos').each(function () {
+                var datatable = $(this);
+                // SEARCH - Add the placeholder for Search and Turn this into in-line form control
+                var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');
+                search_input.attr('placeholder', 'Buscar');
+                search_input.removeClass('form-control-sm');
+                // LENGTH - Inline-Form control
+                var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
+                length_sel.removeClass('form-control-sm');
+            });
+        });
 
         //  GENERAL
         //  Funcion que se dispara cuando se cargo completamente la pagina
@@ -243,8 +276,8 @@
                 var ban_nombre = items[i].ban_nombre;
                 var mov_descripcion = items[i].mov_descripcion;
                 var mov_importe = formatCurrency(items[i].mov_importe);
-                var sbutton = "<a class='btn btn-primary' onclick='EditarMovimiento(" + mov_id + ");' href='#'>Editar</a>"
-                table.fnAddData([mov_fecha, ban_nombre, cat_descripcion, mov_descripcion, mov_importe, sbutton]);
+                var sbutton = "<a class='btn btn-xs btn-primary' onclick='EditarMovimiento(" + mov_id + ");' href='#'><i class='mdi mdi-table-edit ml-1'></i></a>&nbsp;&nbsp;<a class='btn btn-xs btn-danger' onclick='ConfirmarBorrar(" + mov_id + ");' href='#'><i class='mdi mdi-close-circle-outline ml-1'></i></a>"
+                table.fnAddData([sbutton, cat_descripcion, mov_importe, mov_descripcion, mov_fecha, ban_nombre]);
             }
 
         }
@@ -435,4 +468,5 @@
             return (neg ? "-$" : '$') + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
         }
     </script>
+
 </asp:Content>

@@ -34,6 +34,20 @@ namespace FinancialTime.Web.Servicios
         }
 
         [WebMethod]
+        public List<ft_bancoModel> GetBancosSaldo(int nusu_id)
+        {
+            try
+            {
+                BancosDAL _DAL = new BancosDAL();
+                ft_bancoModel ft_BancoModel = new ft_bancoModel();
+                ft_BancoModel.usu_id = nusu_id;
+                return _DAL.GETBancosSaldo(ft_BancoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
         public List<ft_categoriaModel> GetCategorias(int nusu_id, int ncat_id)
         {
             try
@@ -63,6 +77,20 @@ namespace FinancialTime.Web.Servicios
                     entity.ban_id = nban_id;
                 }
                 return _DAL.GETMovimientos(entity);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_movimientoModel> GetUltimosMovimientos(int nusu_id)
+        {
+            try
+            {
+                MovimientosDAL _DAL = new MovimientosDAL();
+                ft_movimientoModel entity = new ft_movimientoModel();
+                entity.usu_id = nusu_id;
+                return _DAL.GETUltimosMovimientos(entity);
             }
             catch
             { throw; }

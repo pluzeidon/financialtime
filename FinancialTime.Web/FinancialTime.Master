@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.urbanui.com/fily/template/demo/vertical-hidden-toggle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Oct 2019 17:11:02 GMT -->
+<!-- Mirrored from www.urbanui.com/fily/template/demo/vertical-hidden-toggle/frmInicio.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Oct 2019 17:11:02 GMT -->
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -190,7 +190,7 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="frmInicio.aspx">
                             <i class="mdi mdi-home menu-icon"></i>
                             <span class="menu-title">Inicio</span>
                         </a>
@@ -281,11 +281,11 @@
     <script src="js/form-repeater.js"></script>
     <script src="js/inputmask.js"></script>
     <script src="js/modal-demo.js"></script>
-    <script src="js/data-table.js"></script>
+    <%--<script src="js/data-table.js"></script>--%>   <%--se hizo en la pagina--%>       
     
     <!-- End custom js for this page-->
 
 </body>
 
-<!-- Mirrored from www.urbanui.com/fily/template/demo/vertical-hidden-toggle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Oct 2019 17:11:31 GMT -->
+<!-- Mirrored from www.urbanui.com/fily/template/demo/vertical-hidden-toggle/frmInicio.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Oct 2019 17:11:31 GMT -->
 </html>
