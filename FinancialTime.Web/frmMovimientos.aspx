@@ -291,7 +291,7 @@
                 $('#cmbBancos').focus();
                 alert('Debe seleccionar un Banco...');
             } else if (cat_id == 'Seleccione la Categoría') {
-                $('#cmbBancos').focus();
+                $('#cmbCategorias').focus();
                 alert('Debe seleccionar una Categoría...');
             } else if (mov_importe == '') {
                 $('#dfmov_importe').focus();
