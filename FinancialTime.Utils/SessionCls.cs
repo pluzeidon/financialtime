@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 
 namespace FinancialTime.Utils
@@ -60,6 +58,15 @@ namespace FinancialTime.Utils
             {
                 return "ASC";
             }
+        }
+
+        public static string Getusu_nombre()
+        {
+            if (validaSesion())
+            {
+                return System.Web.HttpContext.Current.Session["usu_nombre"].ToString();
+            }
+            return "";
         }
 
     }

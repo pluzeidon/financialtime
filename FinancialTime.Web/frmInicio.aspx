@@ -7,7 +7,7 @@
             <div class="card bg-white">
                 <div class="card-body d-flex align-items-center justify-content-between">
                     <h4 class="mt-1 mb-1">Hola, Carlos!</h4>
-                    <button class="btn btn-info d-none d-md-block">Registrar Movimiento</button>
+                    <%--<button class="btn btn-info d-none d-md-block">Registrar Movimiento</button>--%>
                 </div>
             </div>
         </div>
@@ -135,7 +135,7 @@
         <div class="col-xl-12 grid-margin grid-margin-xl-0 stretch-card">
             <div class="card">
                 <div class="card-body pb-0">
-                    <p class="card-title mb-xl-0">Distribución</p>
+                    <p class="card-title mb-xl-0">Distribución de Gastos</p>
                 </div>
                 <canvas id="distribution-chart"></canvas>
                 <div class="card-body">
@@ -251,8 +251,8 @@
         //  Asigna los valores a las columnas del Grid
         //
         function FillTabla(result) {
-            var colors = ["bg-success", "bg-info", "bg-danger", "bg-warning"];
-            var colorsIcons = ["icon-rounded-inverse-success", "icon-rounded-inverse-info", "icon-rounded-inverse-danger", "icon-rounded-inverse-warning"];
+            var colors = ["bg-success", "bg-info", "bg-danger", "bg-warning", "bg-dark","bg-success", "bg-info", "bg-danger", "bg-warning", "bg-dark"];
+            var colorsIcons = ["icon-rounded-inverse-success", "icon-rounded-inverse-info", "icon-rounded-inverse-danger", "icon-rounded-inverse-warning", "icon-rounded-inverse-dark","icon-rounded-inverse-success", "icon-rounded-inverse-info", "icon-rounded-inverse-danger", "icon-rounded-inverse-warning", "icon-rounded-inverse-dark"];
             var items = result.d || result;
             for (var i = 0; i < items.length; i++) {
                 var ban_nombre = items[i].ban_nombre;

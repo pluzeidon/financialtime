@@ -69,8 +69,10 @@
   <ItemGroup>
     <Content Include="css\vertical-layout-light\Gridview.css" />
     <Content Include="css\vertical-layout-light\style.css" />
+    <Content Include="frmBancos.aspx" />
     <Content Include="frmCategorias.aspx" />
     <Content Include="frmInicio.aspx" />
+    <Content Include="frmLogin.aspx" />
     <Content Include="frmMovimientos.aspx" />
     <Content Include="images\auth\lockscreen-bg.jpg" />
     <Content Include="images\auth\login-bg.jpg" />
@@ -107,6 +109,7 @@
     <Content Include="images\faces\face7.jpg" />
     <Content Include="images\faces\face8.jpg" />
     <Content Include="images\faces\face9.jpg" />
+    <Content Include="images\faces\user.png" />
     <Content Include="images\favicon.png" />
     <Content Include="images\lightbox\play-button.png" />
     <Content Include="images\lightbox\thumb-v-v-1.jpg" />
@@ -339,6 +342,13 @@
     <Compile Include="FinancialTime.Master.designer.cs">
       <DependentUpon>FinancialTime.Master</DependentUpon>
     </Compile>
+    <Compile Include="frmBancos.aspx.cs">
+      <DependentUpon>frmBancos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBancos.aspx.designer.cs">
+      <DependentUpon>frmBancos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmCategorias.aspx.cs">
       <DependentUpon>frmCategorias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -352,6 +362,13 @@
     </Compile>
     <Compile Include="frmInicio.aspx.designer.cs">
       <DependentUpon>frmInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmMovimientos.aspx.cs">
       <DependentUpon>frmMovimientos.aspx</DependentUpon>

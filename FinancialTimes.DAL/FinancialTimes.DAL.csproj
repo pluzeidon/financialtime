@@ -71,6 +71,7 @@
     <Compile Include="CategoriasDAL.cs" />
     <Compile Include="MovimientosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuariosDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FinancialTime.Model\FinancialTime.Model.csproj">

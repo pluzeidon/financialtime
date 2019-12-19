@@ -34,6 +34,21 @@ namespace FinancialTime.Web.Servicios
         }
 
         [WebMethod]
+        public List<ft_bancoModel> GetBanco(int nusu_id, int nban_id)
+        {
+            try
+            {
+                BancosDAL _DAL = new BancosDAL();
+                ft_bancoModel ft_BancoModel = new ft_bancoModel();
+                ft_BancoModel.usu_id = nusu_id;
+                ft_BancoModel.ban_id = nban_id;
+                return _DAL.GETBancos(ft_BancoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
         public List<ft_bancoModel> GetBancosSaldo(int nusu_id)
         {
             try
@@ -47,16 +62,47 @@ namespace FinancialTime.Web.Servicios
             { throw; }
         }
 
+
         [WebMethod]
-        public List<ft_categoriaModel> GetCategorias(int nusu_id, int ncat_id)
+        public List<ft_bancoModel> InsBanco(int nban_id, int nusu_id, string sban_nombre)
         {
             try
             {
-                CategoriasDAL _DAL = new CategoriasDAL();
-                ft_categoriaModel ft_CategoriaModel = new ft_categoriaModel();
-                ft_CategoriaModel.usu_id = nusu_id;
-                ft_CategoriaModel.cat_id = ncat_id;
-                return _DAL.GETCategorias(ft_CategoriaModel);
+                ft_bancoModel ft_BancoModel = new ft_bancoModel();
+                ft_BancoModel.usu_id = nusu_id;
+                ft_BancoModel.ban_nombre = sban_nombre;
+                BancosDAL bancosDAL = new BancosDAL();
+                return bancosDAL.insBanco(ft_BancoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_bancoModel> UpdBanco(int nban_id, int nusu_id, string sban_nombre)
+        {
+            try
+            {
+                ft_bancoModel ft_BancoModel = new ft_bancoModel();
+                ft_BancoModel.usu_id = nusu_id;
+                ft_BancoModel.ban_id = nban_id;
+                ft_BancoModel.ban_nombre = sban_nombre;
+                BancosDAL bancosDAL = new BancosDAL();
+                return bancosDAL.UpdBanco(ft_BancoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_bancoModel> delBanco(int nban_id)
+        {
+            try
+            {
+                ft_bancoModel ft_BancoModel = new ft_bancoModel();
+                ft_BancoModel.ban_id = nban_id;
+                BancosDAL bancosDAL = new BancosDAL();
+                return bancosDAL.delBanco(ft_BancoModel);
             }
             catch
             { throw; }
@@ -174,6 +220,21 @@ namespace FinancialTime.Web.Servicios
                 ft_MovimientoModel.mov_id = nmov_id;
                 MovimientosDAL movimientosDAL = new MovimientosDAL();
                 return movimientosDAL.delMovimiento(ft_MovimientoModel);
+            }
+            catch
+            { throw; }
+        }
+
+        [WebMethod]
+        public List<ft_categoriaModel> GetCategorias(int nusu_id, int ncat_id)
+        {
+            try
+            {
+                CategoriasDAL _DAL = new CategoriasDAL();
+                ft_categoriaModel ft_CategoriaModel = new ft_categoriaModel();
+                ft_CategoriaModel.usu_id = nusu_id;
+                ft_CategoriaModel.cat_id = ncat_id;
+                return _DAL.GETCategorias(ft_CategoriaModel);
             }
             catch
             { throw; }

@@ -10,24 +10,33 @@
 namespace FinancialTime.Web {
     
     
-    public partial class FinancialTime {
+    public partial class frmLogin {
         
         /// <summary>
-        /// lblUser control.
+        /// dfusu_mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUser;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dfusu_mail;
         
         /// <summary>
-        /// head control.
+        /// dfusu_password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword dfusu_password;
+        
+        /// <summary>
+        /// btnIniciarSesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIniciarSesion;
     }
 }

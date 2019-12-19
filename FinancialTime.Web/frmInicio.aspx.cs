@@ -1,11 +1,5 @@
-﻿using FinancialTime.Model;
-using FinancialTimes.DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using System;
+using System.Web.Security;
 
 namespace FinancialTime.Web
 {
@@ -13,7 +7,11 @@ namespace FinancialTime.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!this.Page.User.Identity.IsAuthenticated)
+            {
+                FormsAuthentication.RedirectToLoginPage();
+                
+            }
         }
     }
 }
