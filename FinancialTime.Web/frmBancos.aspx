@@ -111,7 +111,7 @@
         //  Carga el combo de Categorías
         //
         $(document).ready(function () {
-            $("#<%=hdndfusu_id.ClientID%>").val("1");
+            $("#hdndfusu_id").val('<%=Session["usu_id"] %>');
             CargaTabla();
         });
         //

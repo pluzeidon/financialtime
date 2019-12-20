@@ -171,7 +171,7 @@
         //  Carga el combo de Categorías
         //
         $(document).ready(function () {
-            $("#<%=hdndfusu_id.ClientID%>").val("1");
+            $("#hdndfusu_id").val('<%=Session["usu_id"] %>');
             CargaComboBancosFiltro();
             window.setTimeout(CargaTabla, 2000);
             CargaComboBancos();

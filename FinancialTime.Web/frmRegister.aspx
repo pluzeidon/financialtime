@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmLogin.aspx.cs" Inherits="FinancialTime.Web.frmLogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmRegister.aspx.cs" Inherits="FinancialTime.Web.frmRegister" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,35 +40,32 @@
                             <div class="brand-logo">
                                 <img src="img/Logo_completo.png" alt="logo">
                             </div>
-                            <h4>¡Hola! empecemos</h4>
-                            <h6 class="font-weight-light">Inicia sesión para continuar.</h6>
-                            <form class="pt-3" runat="server">
+                            <h4>¿Nuevo aquí?</h4>
+                            <h6 class="font-weight-light">Registrarse es fácil. Solo toma unos segundos...</h6>
+                            <form class="pt-3" runat="server">                                
                                 <div class="form-group">
-                                    <input type="email" runat="server" class="form-control form-control-lg" id="dfusu_mail" placeholder="Usuario">
+                                    <input type="email" runat="server" class="form-control form-control-lg" id="dfnewusu_mail" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" runat="server" class="form-control form-control-lg" id="dfusu_password" placeholder="Contraseña">
+                                    <input type="text" runat="server" class="form-control form-control-lg" id="dfnewusu_nombre" placeholder="Nombre">
                                 </div>
-                                <div class="mt-3">
-                                    <%--<a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">ENTRAR</a>--%>
-                                    <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar Sesión" CssClass="btn-block btn-primary btn-lg font-weight-medium auth-form-btn" OnClick="btnIniciarSesion_Click" />
+                                <div class="form-group">
+                                    <input type="password" runat="server" class="form-control form-control-lg" id="dfnewusu_password" placeholder="Contraseña">
                                 </div>
-                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                <div class="mb-4">
                                     <div class="form-check">
                                         <label class="form-check-label text-muted">
                                             <input type="checkbox" class="form-check-input">
-                                            Mantenme conectado
+                                            Acepto todos los términos y condiciones
+                   
                                         </label>
                                     </div>
-                                    <a href="#" class="auth-link text-black">¿Se te olvidó tu contraseña?</a>
                                 </div>
-                                <%--<div class="mb-2">
-                                    <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                                        <i class="mdi mdi-facebook mr-2"></i>Conéctate usando Facebook
-                                    </button>
-                                </div>--%>
+                                <div class="mt-3">
+                                    <asp:Button ID="btnRegistrarse" runat="server" Text="REGISTRARSE" CssClass="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" OnClick="btnRegistrarse_Click" />
+                                </div>
                                 <div class="text-center mt-4 font-weight-light">
-                                    ¿No tienes una cuenta? <a href="frmRegister.aspx" class="text-primary">Crearla</a>
+                                    ¿Ya tienes una cuenta? <a href="frmLogin.aspx" class="text-primary">Entrar</a>
                                 </div>
                             </form>
                         </div>
